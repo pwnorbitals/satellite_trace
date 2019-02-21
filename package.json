@@ -1,0 +1,8 @@
+{
+  "name": "calculateur_satellite",
+  "version": "1.0.0",
+  "main": "electron.js",
+  "dependencies": {
+    "electron-packager": "^13.0.1"
+  }
+}

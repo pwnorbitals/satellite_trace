@@ -1,0 +1,222 @@
+/* FEUILLE DE STYLE DE LA PAGE */  
+    /* style global */
+    html, body {
+        width: 1200px;
+        height: 600px;
+        position: relative;
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    /* style des champs numériques */
+    #orbital_parameters {
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        top: 5px;
+        height: 45px;
+        z-index: 1000;
+        
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+	    -moz-user-select: none;     /* Firefox all */
+  	    -ms-user-select: none;      /* IE 10+ */
+         user-select: none;          /* Likely future */      
+    }
+    
+    
+    #orbital_parameters fieldset .mode_1 {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .input_block input[type="number"] {
+        width: 77px;
+    }
+    
+    form fieldset {
+        border-radius: 5px;
+        padding-bottom: 7px;
+        padding-top: 7px;
+        border: 1px solid black;
+        padding-left: 5px;
+    }
+    
+    #orbital_parameters fieldset .mode_2 {
+        display: none;
+        margin-right: 10px;
+    }
+    
+    fieldset label {
+    	vertical-align: text-top;
+    }
+    
+    /* style de la carte */
+    #map_wrapper{
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        top: 55px;
+    }
+    
+    #map {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 1px solid gray;
+        transition: width 1s, height 1s;
+    }
+    
+    #map.offline {
+    	filter: brightess(50%);
+    }
+    
+    #map.offline #explanation {
+    
+    }
+    
+    
+    #map_buttons {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    
+    #debugging_window, #fullscreen {
+    	display: none;
+    }
+    
+    .fullscreen {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    }
+   
+    
+    /* style du tableau */  
+    table a:link {
+	    color: #666;
+	    font-weight: bold;
+	    text-decoration:none;
+    }
+    table a:visited {
+	    color: #999999;
+	    font-weight:bold;
+	    text-decoration:none;
+    }
+    table a:active,
+    table a:hover {
+	    color: #bd5a35;
+	    text-decoration:underline;
+    }
+    #values {
+	    font-family:Arial, Helvetica, sans-serif;
+	    color:#666;
+	    font-size:12px;
+	    text-shadow: 1px 1px 0px #fff;
+	    background:#eaebec;
+	    
+	    border:#ccc 1px solid;
+	    display: none;
+	    max-height: 100%;
+	    overflow-y: scroll;
+
+	    -moz-border-radius:3px;
+	    -webkit-border-radius:3px;
+	    border-radius:3px;
+
+	    -moz-box-shadow: 0 1px 2px #d1d1d1;
+	    -webkit-box-shadow: 0 1px 2px #d1d1d1;
+	    box-shadow: 0 1px 2px #d1d1d1;
+	    
+	    position: absolute;
+	    top: 0;
+	    left: calc(50% - 243px);
+    }
+    
+
+    #preliminaries {
+        font-family:Arial, Helvetica, sans-serif;
+	    color:#666;
+	    font-size:12px;
+	    text-shadow: 1px 1px 0px #fff;
+	    background:#eaebec;
+	    
+	    border:#ccc 1px solid;
+	    display: none;
+	    max-height: 100%;
+
+	    -moz-border-radius:3px;
+	    -webkit-border-radius:3px;
+	    border-radius:3px;
+
+	    -moz-box-shadow: 0 1px 2px #d1d1d1;
+	    -webkit-box-shadow: 0 1px 2px #d1d1d1;
+	    box-shadow: 0 1px 2px #d1d1d1;
+	    
+        position: absolute;
+        top: 0;
+        left: 5%;
+    } 
+    
+    table th {
+	    padding:21px 25px 22px 25px;
+	    border-top:1px solid #fafafa;
+	    border-bottom:1px solid #e0e0e0;
+
+	    background: #ededed;
+	    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	    background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+    }
+    table tr:first-child th:first-child{
+	    -moz-border-radius-topleft:3px;
+	    -webkit-border-top-left-radius:3px;
+	    border-top-left-radius:3px;
+    }
+    table tr:first-child th:last-child{
+	    -moz-border-radius-topright:3px;
+	    -webkit-border-top-right-radius:3px;
+	    border-top-right-radius:3px;
+    }
+    table tr{
+	    text-align: center;
+	    padding-left:20px;
+    }
+
+    table tr td {
+	    padding:18px;
+	    border-top: 1px solid #ffffff;
+	    border-bottom:1px solid #e0e0e0;
+	    border-left: 1px solid #e0e0e0;
+	
+	    background: #fafafa;
+	    background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+	    background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+    }
+    table tr.even td{
+	    background: #f6f6f6;
+	    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+	    background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+    }
+    table tr:last-child td{
+	    border-bottom:0;
+    }
+    table tr:last-child td:first-child{
+	    -moz-border-radius-bottomleft:3px;
+	    -webkit-border-bottom-left-radius:3px;
+	    border-bottom-left-radius:3px;
+    }
+    table tr:last-child td:last-child{
+	    -moz-border-radius-bottomright:3px;
+	    -webkit-border-bottom-right-radius:3px;
+	    border-bottom-right-radius:3px;
+    }
+    table tr:hover td{
+	    background: #f2f2f2;
+	    background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	    background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+    }
+    
+    /* FIN DE LA FEUILLE DE STYLE */
