@@ -21,10 +21,10 @@ function initMap() {
     // Checking if ran with electron
     if( typeof(require) != "undefined") {
         var remote = require('electron').remote;     
-        if(remote.getGlobal('electron').inEngine) {
+        if(remote.getGlobal('electron').inEngine || userAgent.indexOf(' electron/') > -1) {
         
         	// If electron is detected, set the flag
-            electron = true
+			electron = true;
             
             // Enable the "debugging window button"
             var debug_win_button = document.getElementById("debugging_window")
