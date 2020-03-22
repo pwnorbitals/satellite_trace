@@ -15,6 +15,20 @@ var user_data = null;       // User orbital parameters & other inputs
 var electron = false;       // Is the application executed in electron ?
 
 
+
+(function initPage() {
+	let tag = document.createElement('script');
+	const urlParams = new URLSearchParams(window.location.search);
+	const key = urlParams.get('key');
+	tag.src = "https://maps.googleapis.com/maps/api/js?key="+key;
+	tag.async = true;
+	tag.defer = true;
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+})();
+
+
 // Dynamic map initialization
 function initMap() {
     

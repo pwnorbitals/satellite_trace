@@ -1,6 +1,7 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, dialog} = require('electron')
 const path = require('path')
 const url = require('url')
+const fs = require('fs');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -11,12 +12,19 @@ function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({width: 1250, height: 650, resizable: false, show: false})
 
+  let key = "";
+  try {
+    key = fs.readFileSync("./key.txt");
+  } catch (e) {}
+
+  if (key == "") {
+    dialog.showMessageBox(null, {title: "Warning", message: "No API key found in ./key.txt..."});
+  }
+
+
   // and load the index.html of the app.
-  win.loadURL(url.format({
-    pathname: path.join(__dirname, 'map.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+
+  win.loadURL("file://"+path.join(__dirname, 'map.html')+"?key="+key);
   
   win.setMenu(null);
 
