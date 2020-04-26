@@ -4,7 +4,7 @@
   "main": "electron.js",
   "dependencies": {
     "electron": "^6.0.10",
-    "electron-packager": "^13.0.1",
+    "electron-packager": "^14.2.1",
     "electron-unhandled": "^3.0.0"
   }
 }
