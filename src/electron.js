@@ -18,7 +18,7 @@ function createWindow () {
   } catch (e) {}
 
   if (key == "") {
-    dialog.showMessageBox(null, {title: "Warning", message: "No API key found in ./key.txt..."});
+    dialog.showMessageBoxSync(null, {type: "warning", title: "API key warning", message: "No API key found in ./key.txt...", buttons: ["OK"]});
   }
 
 
