@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "main": "electron.js",
   "dependencies": {
-    "electron": "^11.0.3",
+    "electron": "^11.1.0",
     "electron-packager": "^15.2.0",
     "electron-unhandled": "^3.0.2"
   }
